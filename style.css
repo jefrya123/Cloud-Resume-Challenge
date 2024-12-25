@@ -1,0 +1,90 @@
+/* style.css */
+
+/* Reset or basic setup */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Standard text color */
+}
+
+/* Header styling */
+header {
+  background-color: #3f51b5; /* A nice blue/purple shade */
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.5em 0 0;
+  font-style: italic;
+}
+
+/* Main container */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff; /* White container on a light background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 2em;
+}
+
+/* Section headings */
+h2 {
+  margin-top: 0;
+  color: #3f51b5; /* Same accent color as the header */
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2em; /* Indent list items slightly */
+  line-height: 1.6;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Visitor counter styling (optional) */
+#counter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d32f2f; /* Red accent for contrast, adjust if you like */
+}
+
+/* Footer */
+footer {
+  background-color: #efefef;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}

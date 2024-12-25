@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeff Ryan | Cloud Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <h1>Jeff Ryan</h1>
+    <p>Tech Enthusiast</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- ABOUT ME SECTION -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Extensive international experience gained through military service as a trusted advisor and leader.  
+        Specialized in digital forensics, SOC (Security Operations Center) analysis, security engineering, and
+        system administration. Demonstrated expertise in building secure, resilient systems and conducting
+        advanced technical operations in diverse and dynamic environments worldwide.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section>
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Army (2011 – 2025)</strong><br />
+          .<br />
+          Highly skilled professional with multiple combat deployments and extensive experience operating 
+          in high-stress, mission-critical environments. Proficient in exploiting targets and conducting 
+          advanced digital forensics and SOC (Security Operations Center) analysis. Collaborated with the 
+          NSA and Special Operations units to achieve critical objectives. Served as a military combat 
+          advisor throughout the Middle East, providing strategic guidance and technical expertise to 
+          enhance allied operational capabilities. Demonstrated excellence in security engineering, 
+          system administration, and leadership in dynamic and challenging conditions.
+        </li>
+      </ul>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section>
+      <h2>Education</h2>
+      <p>
+        <strong>Master’s in Cybersecurity (2025)</strong> – Western Governors University<br />
+        <strong>Bachelor’s in Cloud Computing (2024)</strong> – Western Governors University
+      </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>AWS</li>
+        <li>Azure</li>
+        <li>Terraform</li>
+        <li>Git</li>
+        <li>Linux</li>
+        <li>ELK (Elastic Stack)</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section>
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong> 
+        <a href="mailto:jefrya123@gmail.com">jefrya123@gmail.com</a>
+      </p>
+      <p>
+        <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/jeffery-ryan-baaa24301/">
+          https://www.linkedin.com/in/jeffery-ryan-baaa24301/
+        </a>
+      </p>
+      <p>
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/jefrya123?tab=repositories">
+          https://github.com/jefrya123?tab=repositories
+        </a>
+      </p>
+    </section>
+
+    <!-- VISITOR COUNTER SECTION -->
+    <section>
+      <h2>Visitor Count</h2>
+      <p id="visitor-counter">Loading...</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 Jeff Ryan</p>
+  </footer>
+
+  <!-- Visitor Counter JavaScript -->
+  <script>
+    async function fetchVisitorCount() {
+  try {
+    const response = await fetch('https://l7rj8awgsb.execute-api.us-east-1.amazonaws.com/visitors', {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    document.getElementById('visitor-counter').textContent = `Visitor Count: ${data.count}`;
+  } catch (error) {
+    console.error('Error fetching visitor count:', error);
+    document.getElementById('visitor-counter').textContent = 'Error loading count.';
+  }
+}
+
+
+    // Call the function when the page loads
+    fetchVisitorCount();
+  </script>
+</body>
+</html>
