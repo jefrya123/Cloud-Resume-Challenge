@@ -17,4 +17,4 @@ After completing this challenge, I plan to start a project on **Azure** to expan
 
 ## Message to Fellow Cloud Enthusiasts
 
-Wishing everyone the best of luck on their cloud journeys! Let's continue to learn, build, and grow in this exciting field..
+Wishing everyone the best of luck on their cloud journeys! Let's continue to learn, build, and grow in this exciting field.
