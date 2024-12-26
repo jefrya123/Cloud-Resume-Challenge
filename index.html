@@ -103,28 +103,28 @@
   <!-- Visitor Counter JavaScript -->
   <script>
   async function fetchVisitorCount() {
-  try {
-    const response = await fetch('https://frudmoqgp7.execute-api.us-east-1.amazonaws.com/prod/visitor-count', {
-      method: 'GET',
-      headers: { 'Accept': 'application/json' }
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      try {
+        console.log("fetchVisitorCount called"); // Debugging log
+        const response = await fetch('https://frudmoqgp7.execute-api.us-east-1.amazonaws.com/prod/visitor-count', {
+          method: 'GET',
+          headers: { 'Accept': 'application/json' }
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        document.getElementById('visitor-counter').textContent = `Visitor Count: ${data.count}`;
+      } catch (error) {
+        console.error('Error fetching visitor count:', error);
+        document.getElementById('visitor-counter').textContent = 'Error loading count.';
+      }
     }
-    const data = await response.json();
-    document.getElementById('visitor-counter').textContent = `Visitor Count: ${data.count}`;
-  } catch (error) {
-    console.error('Error fetching visitor count:', error);
-    document.getElementById('visitor-counter').textContent = 'Error loading count.';
-  }
-}
-
-fetchVisitorCount();
-
-
 
     // Call the function when the page loads
-    fetchVisitorCount();
+    document.addEventListener('DOMContentLoaded', (event) => {
+      console.log("DOM fully loaded and parsed");
+      fetchVisitorCount();
+    });
   </script>
 </body>
 </html>
